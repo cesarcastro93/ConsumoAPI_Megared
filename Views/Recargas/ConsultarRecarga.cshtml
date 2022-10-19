@@ -1,0 +1,76 @@
+﻿@model ConsumoDeAPI_MegaRed.Models.RecargasModel.RecargaConsultarModel
+@{
+    ViewBag.Title = "ConsultarRecarga";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="align">
+        <div class="login">
+            <header class="login__header">
+                <h2>consultar recarga</h2>
+            </header>
+
+            <div class="login__form">
+                <div class="mb-3 ">
+                    <label class="col-sm-6 col-form-label">Numero Celular</label>
+                    <input class="input-lg" type="text" name="InputNumeroCelular" />
+                </div>
+                <div class="mb-3 ">
+                    <label class="col-sm-6 col-form-label">Numero de celular</label>
+                    <input class="input-lg" type="text" name="InputIdTrx" />
+                </div>
+                <div>
+                    <button runat="server" type="submit" class="btn btn-primary btn-lg" Text="Button">Consultar </button>
+                </div>
+
+                <div class="h4">
+                    @ViewBag.Alert
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="jumbotron">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">FECHA</th>
+                    <th scope="col">NUMERO</th>
+                    <th scope="col">OPERADOR</th>
+                    <th scope="col">VALOR</th>
+                    <th scope="col">COD_APROBACION</th>
+                    <th scope="col">ESTADO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    
+
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    
+
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    
+
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button runat="server" type="submit" class="btn btn-danger btn-lg" Text="Button">Regresar</button>
+        </div>
+    </div>
+
+
+
+}
+
+

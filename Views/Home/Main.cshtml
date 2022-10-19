@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Main";
+}
+@using (Html.BeginForm())
+{
+    <br/>
+  
+    <div >
+        <div class="band col-md-4 col-sm-6 col-xs-12">
+            <div class="center">
+                <div class="front-face ">
+                    <div class="contents front ">
+                        <img src="https://i.postimg.cc/XvvrVhSB/PagosIMG.png" alt='Imagen' class="ImagenD" height='400' />
+                    </div>
+                </div>
+                <div class="back-face">
+                    <div class="contents back">
+                        <p class='card-text'>Paga servicios publicos</p>
+                        @Html.ActionLink("Pago convenios", "About", "Home", null, new { @class = "btn btn-primary btn-large" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="band col-md-4 col-sm-6 col-xs-12">
+            <div class="center">
+                <div class="front-face ">
+                    <div class="contents front ">
+                        <img src="https://i.postimg.cc/VLs1VjYN/Recargas-IMG.png" alt='Imagen' class="ImagenD" height='400' />
+                    </div>
+                </div>
+                <div class="back-face">
+                    <div class="contents back">
+                        <p class='card-text'>Recarga de minutos a todo operador </p>
+                        @*<a class='btn btn-primary rounded-3' onClick="btn_IrArecargar" runat="server" >Recargas</a>*@
+                        @Html.ActionLink("Recargas", "VenderRecarga", "Recargas", null, new { @class = "btn btn-primary btn-large" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="band col-md-4 col-sm-6 col-xs-12">
+            <div class="center">
+                <div class="front-face ">
+                    <div class="contents front ">
+                        <img src="https://i.postimg.cc/tCryQYTN/Apuestas-IMG.png" alt='Imagen' class="card-img-top ImagenD" height='400' />
+                    </div>
+                </div>
+                <div class="back-face">
+                    <div class="contents back">
+                        <p class='card-text'>MegApuesta, Wplay,RushBet, Luckia</p>
+                        @Html.ActionLink("Apuestas deportivas", "index", "ApuestasDeportivas", null, new { @class = "btn btn-primary btn-large" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       
+
+        @*<div class="band col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="center">
+                    <div class="front-face ">
+                        <div class="contents front ">
+                            <img src="https://www.grada3.com/wp-content/uploads/2022/06/apuestas-deportivas.jpg" alt='Imagen' class="card-img-top ImagenD" height='400' />
+                        </div>
+                    </div>
+                    <div class="back-face">
+                        <div class="contents back">
+                            <p class='card-text'>MegApuesta, Wplay,RushBet, Luckia</p>
+                            <a class='btn btn-primary rounded-3' onClick={modalOpen}>Apuestas Deportivas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+
+   
+}
+

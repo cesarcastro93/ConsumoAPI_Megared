@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Inicia sesion en Vipay";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="align">
+
+        <div class="login">
+
+            <header class="login__header">
+                <h2>
+                    <svg class="icon">
+                        <use xlink:href="#icon-lock" />
+                    </svg>Iniciar sesion
+                </h2>
+            </header>
+
+            <div class="login__form">
+
+                <div>
+                    <div class="h3 col-md-4">
+                        <label class="col-sm-6 col-form-label">Usuario</label>
+                    </div>
+                    <div>
+                        <input class="input-lg" type="text" />
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <div class="h3 col-md-4">
+                            <label class="col-sm-6 col-form-label">Contraseña</label>
+                        </div>
+                        <div>
+                            <input class="input-lg" type="text" />
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div>
+                    @*<button runat="server" type="submit" class="btn btn-primary btn-lg " Text="Button">Ingresar</button>*@
+                    @Html.ActionLink("Ingresar", "Main", "Home", null, new { @class = "btn btn-primary btn-lg center-block", type = "submit" })
+                </div>
+                <div class="h3">
+                    @ViewBag.Alert
+                </div>
+
+            </div>
+
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="icons">
+
+            <symbol id="icon-lock" viewBox="0 0 448 512">
+                <path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z" />
+            </symbol>
+
+        </svg>
+
+    </div>
+
+}

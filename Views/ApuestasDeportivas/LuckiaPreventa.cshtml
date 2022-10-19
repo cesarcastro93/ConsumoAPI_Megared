@@ -1,0 +1,48 @@
+﻿@model ConsumoDeAPI_MegaRed.Models.ApuestasDeportivasModel.PreventaRequestModel
+@{
+    ViewBag.Title = "LuckiaPreventa";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="align">
+        <div class="login">
+            <header class="login__header">
+                <h2>Preventa Luckia</h2>
+            </header>
+
+            <div class="login__form">
+
+                <div class="mb-3 ">
+                    <label class="col-sm-6 col-form-label">Numero documento</label>
+                    @Html.EditorFor(Model => Model.documento, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                </div>
+                <div class="mb-3 ">
+                    <label class="col-sm-6 col-form-label">Nombre</label>
+                    @Html.EditorFor(Model => Model.name, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                </div>
+                <div class="mb-3 ">
+                    <label class="col-sm-6 col-form-label">Apellido</label>
+                    @Html.EditorFor(Model => Model.last_name, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                </div>
+                <div class="mb-3 ">
+                    <label class="col-sm-6 col-form-label">Valor recarga</label>
+                    @Html.EditorFor(Model => Model.valor, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                </div>
+
+                <div>
+                    <button runat="server" type="submit" class="btn btn-primary btn-lg" Text="Button">Aceptar</button>
+                </div>
+
+                <div class="h4">
+                    @ViewBag.Alert
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+

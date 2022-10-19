@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm())
+{
+<div class="container">
+    <div class="band col-md-4 col-sm-6 col-xs-12">
+        <div class="center">
+            <div class="front-face ">
+                <div class="contents front ">
+                    <img src="https://feelinglucky.co/wp-content/uploads/megapuesta-logo.png" alt='Imagen' class="ImagenD" height='400' />
+                </div>
+            </div>
+            <div class="back-face">
+                <div class="contents back">
+                    <p class='card-text'>Megapuesta</p>
+                    @Html.ActionLink("Recargar cuenta", "PreventaMegApuesta", "ApuestasDeportivas", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="band col-md-4 col-sm-6 col-xs-12">
+        <div class="center">
+            <div class="front-face ">
+                <div class="contents front ">
+                    <img src="https://apuestas.com.co/wp-content/uploads/2022/01/wplay-bonus.jpg" alt='Imagen' class="card-img-top ImagenD" height='400' />
+                </div>
+            </div>
+            <div class="back-face">
+                <div class="contents back">
+                    <p class='card-text'>Wplay</p>
+                    @*<a class='btn btn-primary rounded-3' onClick="btn_IrArecargar" runat="server" >Recargas</a>*@
+                    @Html.ActionLink("Recargar cuenta", "WplayPreventa", "ApuestasDeportivas", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="band col-md-4 col-sm-6 col-xs-12">
+        <div class="center">
+            <div class="front-face ">
+                <div class="contents front ">
+                    <img src="https://k7f6k2y7.stackpathcdn.com/latinoamerica/wp-content/uploads/sites/2/2021/04/RUSHBET-900x600.jpg" alt='Imagen' class="card-img-top ImagenD" height='400' />
+                </div>
+            </div>
+            <div class="back-face">
+                <div class="contents back">
+                    <p class='card-text'>RushBet</p>
+                    @Html.ActionLink("Recargar cuenta", "RushBetPreventa", "ApuestasDeportivas", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="band  col-md-4 col-sm-6 col-xs-12">
+        <div class="center">
+            <div class="front-face ">
+                <div class="contents front ">
+                    <img src="https://apuestas.com.co/wp-content/uploads/2021/12/Aquijuego-review-1.jpg" alt='Imagen' class="card-img-top ImagenD" height='400' />
+                </div>
+            </div>
+            <div class="back-face">
+                <div class="contents back">
+                    <p class='card-text'>AquiJuego</p>
+                    @Html.ActionLink("Recargar cuenta", "AquiJuegoVentaResponse", "ApuestasDeportivas", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="band  col-md-4 col-sm-6 col-xs-12">
+        <div class="center">
+            <div class="front-face ">
+                <div class="contents front ">
+                    <img src="https://123140-376058-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2020/06/apuestas-combinadas-en-luckia.jpg" alt='Imagen' class="card-img-top ImagenD" height='400' />
+                </div>
+            </div>
+            <div class="back-face">
+                <div class="contents back">
+                    <p class='card-text'>Luckia</p>
+                    @Html.ActionLink("Recargar cuenta", "LuckiaPreventa", "ApuestasDeportivas", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="band  col-md-4 col-sm-6 col-xs-12">
+        <div class="center">
+            <div class="front-face ">
+                <div class="contents front ">
+                    <img src="https://futbolete.com/apuestas/wp-content/uploads/2022/03/sportium_logo.jpg" alt='Imagen' class="card-img-top ImagenD" height='400' />
+                </div>
+            </div>
+            <div class="back-face">
+                <div class="contents back">
+                    <p class='card-text'>Sportium</p>
+                    @Html.ActionLink("Recargar cuenta", "SportiumVentaRequest", "ApuestasDeportivas", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+}

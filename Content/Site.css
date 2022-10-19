@@ -1,0 +1,283 @@
+﻿body {
+    background: url("https://i.postimg.cc/m2p8K9cd/background-1.jpg") no-repeat center center fixed;
+    font-family: 'Varela Round', sans-serif;
+    padding: 200px;
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.CajaPadre {
+    display: grid;
+    gap: 50px;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  
+}
+/*@media only screen and (max-width: 80px) {
+
+    div.Formato {
+        height: 700px;
+        width: 593px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar {
+    display:none
+    }
+    body {
+    background:none
+    }
+    .container-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+   
+}*/
+.footer {
+    width: 100%;
+   
+    margin-bottom:0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+
+h2 {
+    font-size: 1.75rem;
+}
+
+input {
+
+    border: none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+}
+
+svg {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* ---------- ALIGN ---------- */
+.align {
+    display: grid;
+    place-items: center;
+}
+
+/* ---------- BUTTON ---------- */
+
+.button {
+    background-color: #33cc77;
+    color: #fff;
+    padding: 0.25em 1.5em;
+}
+
+    .button:focus,
+    .button:hover {
+        background-color: #28ad63;
+    }
+
+/* ---------- ICONS ---------- */
+.icons {
+    display: none;
+}
+
+.icon {
+    fill: currentcolor;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+}
+
+/* ---------- LOGIN ---------- */
+.login {
+    width: 400px;
+
+}
+
+.login__header {
+    background-color: #DE4908;
+    border-top-left-radius: 1.25em;
+    border-top-right-radius: 1.25em;
+    color: #fff;
+    padding: 1.25em 1.625em;
+}
+
+    .login__header :first-child {
+        margin-top: 0;
+    }
+
+    .login__header :last-child {
+        margin-bottom: 0;
+    }
+
+.login h2 .icon {
+    margin-right: 14px;
+}
+
+.login__form {
+    background-color: #fff;
+    border-bottom-left-radius: 1.25em;
+    border-bottom-right-radius: 1.25em;
+    color: #777;
+    display: grid;
+    gap: 0.875em;
+    padding: 1.25em 1.625em;
+    width: 100%;
+}
+
+.login input {
+    border-radius: 0.1875em;
+}
+
+.Lista {
+    background-color: #eee;
+    color: #777;
+    padding: 0.25em 0.625em;
+    width: 100%;
+}
+
+
+    .login input[type="email"],
+    .login input[type="text"] {
+        background-color: #eee;
+        color: #777;
+        padding: 0.25em 0.625em;
+        width: 100%;
+    }
+
+.login button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.FrameSetUp {
+    height: 90%;
+    width: 90%;
+}
+
+.band {
+    grid-template-columns: 1fr;
+    padding-top: 10%;
+    padding-left:15%;
+    
+}
+
+.ImagenD {
+    border-radius: 250px;
+    border-top-right-radius: 250px;
+    height: auto;
+    width: auto;
+}
+
+.center:hover {
+    box-shadow: 0 25px 25px rgba(0,0,0,0.2);
+}
+
+.front-face,
+.contents,
+.back-face {
+    position: absolute;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 300px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.front-face,
+.back-face {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(107, 103, 103, 0.2));
+    background-size: cover;
+    background-position: center;
+    transform: translateY(0deg);
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform .7s cubic-bezier(.4, .2, .2, 1);
+    border-radius: 250px;
+}
+
+.contents {
+    left: 0%;
+    top: 50%;
+    width: 100%;
+    perspective: 1000px;
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+}
+
+
+.front p {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.front span {
+    font-size: 23px;
+    color: white;
+}
+
+.front p:after {
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    width: 100px;
+    height: 2px;
+    background: white;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.back-face {
+    transform: rotateY(180deg);
+    background: linear-gradient(45deg, #043348 0%, #032535 100%);
+}
+
+.back {
+    color: white;
+}
+
+    .back h2 {
+        font-size: 33px;
+        padding-bottom: 5px;
+    }
+
+    .back span {
+        font-size: 25px;
+    }
+
+.center:hover > .back-face {
+    transform: rotateY(0deg);
+}
+
+.center:hover > .front-face {
+    transform: rotateY(-180deg);
+}
+
+
+
+
+

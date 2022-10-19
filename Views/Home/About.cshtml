@@ -1,0 +1,54 @@
+﻿@model ConsumoDeAPI_MegaRed.Models.ServiciosPublicosModel.ConsultarServiciosPublicosModel
+
+@{
+    ViewBag.Title = "Consulta tu factura";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="align">
+
+        <div class="login">
+
+            <header class="login__header">
+                <h2>Consulta tu factura</h2>
+            </header>
+
+            <div class="login__form">
+
+                <div>
+                    <div class="h3 col-md-3">
+                        <label class="col-sm-4 col-form-label">Convenio</label>
+                    </div>
+                    <div>
+                        @Html.EditorFor(Model => Model.convenio, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <div class="h3 col-md-3">
+                            <label class="col-sm-4 col-form-label">Referencia</label>
+                        </div>
+                        <div>
+                            @Html.EditorFor(Model => Model.referencia, new { htmlAttributes = new { @class = " input-lg", type = "text" } })
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <button runat="server" type="submit" class="btn btn-primary btn-lg "  Text="Button">Verificar Factura</button>
+                </div>
+                <div class="h3">
+                    @ViewBag.Alert
+                </div>
+               
+            </div>
+
+        </div>
+
+
+    </div>
+
+}

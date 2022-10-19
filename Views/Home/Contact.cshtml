@@ -1,0 +1,56 @@
+﻿@model ConsumoDeAPI_MegaRed.Models.ServiciosPublicosModel.PagarServicioPublicoModel.datapago
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    <div class="align">
+        <div class="login">
+            <header class="login__header">
+                <h2>Detalles de pago</h2>
+            </header>
+
+            <div class="login__form">
+                <fieldset disabled>
+                    <div class="mb-3 ">
+                        <label class="col-sm-4 col-form-label">Convenio</label>
+                        @Html.EditorFor(Model => Model.codigoConvenio, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="col-sm-4 col-form-label">Referencia</label>
+                        @Html.EditorFor(Model => Model.referencia, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="col-sm-6 col-form-label">Nombre Banco</label>
+                        @Html.EditorFor(Model => Model.nombreBanco, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="col-sm-4 col-form-label">Valor a pagar</label>
+                        @Html.EditorFor(Model => Model.amount, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="col-sm-4 col-form-label">Operador</label>
+                        @Html.EditorFor(Model => Model.operador, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                </fieldset>
+                <div class="mb-3 ">
+                    <label class="col-sm-4 col-form-label">Recibo</label>
+                    <input class="input-lg" type="text" name="InputRecibo"/>
+                </div>
+                <div>
+                    <button runat="server" type="submit" class="btn btn-primary btn-lg" Text="Button">Pagar</button>
+                </div>
+
+                <div class="h4">
+                    @ViewBag.Alert
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}

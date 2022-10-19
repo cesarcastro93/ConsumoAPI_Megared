@@ -1,0 +1,51 @@
+﻿@model ConsumoDeAPI_MegaRed.Models.ServiciosPublicosModel.RespuestaServiciosPublicos.detalle
+@{
+    ViewBag.Title = "ServicioPagado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="align">
+        <div class="login">
+            <header class="login__header">
+                <h2>Detalles transaccion</h2>
+            </header>
+
+            <div class="login__form">
+                <fieldset disabled>
+                    <div class="mb-4">
+                        <label class="col-sm-6 col-form-label">ID Transaccion</label>
+                        @Html.EditorFor(Model => Model.ID_TRANSACCION, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                    <div class="mb-4">
+                        <label class="col-sm-6 col-form-label">Codigo aprobacion</label>
+                        @Html.EditorFor(Model => Model.COD_APROBACION, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                    <div class="mb-4">
+                        <label class="col-sm-8 col-form-label">Codigo de autorizacion</label>
+                        @Html.EditorFor(Model => Model.COD_AUTORIZACION, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                    <div class="mb-4">
+                        <label class="col-sm-6 col-form-label">Detalle</label>
+                        @Html.EditorFor(Model => Model.DETALLE, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="col-sm-6 col-form-label">Cambio</label>
+                        @Html.EditorFor(Model => Model.Cambio, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                </fieldset>
+                <div>
+                    <button runat="server" type="submit" class="btn btn-primary btn-lg" Text="Button">OK</button>
+                </div>
+
+                <div class="h4">
+                    @ViewBag.Alert
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+

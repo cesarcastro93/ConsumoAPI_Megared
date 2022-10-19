@@ -1,0 +1,52 @@
+﻿@model ConsumoDeAPI_MegaRed.Models.ApuestasDeportivasModel.PreventaResponseModel.Detalle
+
+
+@{
+    ViewBag.Title = "PreventaResponse";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="align">
+        <div class="login">
+            <header class="login__header">
+                <h2>Detalle preventa Wplay</h2>
+            </header>
+
+            <div class="login__form">
+                <fieldset disabled>
+                    <div class="mb-3 ">
+                        <label class="col-sm-6 col-form-label">Id transaccion</label>
+                        @Html.EditorFor(Model=>Model.nombre, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="col-sm-6 col-form-label">documento</label>
+                        @Html.EditorFor(Model => Model.documento, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="col-sm-6 col-form-label">Fecha</label>
+                        @Html.EditorFor(Model => Model.fechaTransaccion, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+
+                    <div class="mb-3 ">
+                        <label class="col-sm-6 col-form-label">Id confirmacion</label>
+                        @Html.EditorFor(Model => Model.idConfirmacion, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                   
+                </fieldset>
+                <div>
+                    <button runat="server" type="submit" class="btn btn-primary btn-lg" Text="Button">Aceptar</button>
+                </div>
+
+                <div class="h4">
+                    @ViewBag.Alert
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+

@@ -1,0 +1,59 @@
+﻿@model ConsumoDeAPI_MegaRed.Models.ApuestasDeportivasModel.VentaRequestModel
+@{
+    ViewBag.Title = "RushBetVentaRequest";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="align">
+        <div class="login">
+            <header class="login__header">
+                <h2>Venta RushBet</h2>
+            </header>
+
+            <div class="login__form">
+                <fieldset disabled>
+                    <div class="mb-3 ">
+                        <label class="col-sm-6 col-form-label">Numero documento</label>
+                        @Html.EditorFor(Model => Model.destinatario, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="col-sm-6 col-form-label">Valor recarga</label>
+                        @Html.EditorFor(Model => Model.valor, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="col-sm-6 col-form-label">Pay Id</label>
+                        @Html.EditorFor(Model => Model.extra.pay, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+                    </div>
+
+                </fieldset>
+                <div class="mb-3 ">
+                    <label class="col-sm-6 col-form-label">Nombre </label>
+                    <input class="input-lg" type="text" name="InputNombre" />
+                </div>
+                <div class="mb-3 ">
+                    <label class="col-sm-6 col-form-label">Apellido</label>
+                    <input class="input-lg" type="text" name="InputApellido" />
+                </div>
+                <div class="mb-3 ">
+                    <label class="col-sm-4 col-form-label">Recibo</label>
+                    <input class="input-lg" type="text" name="InputRecibo" />
+                </div>
+                <div>
+                    <button runat="server" type="submit" class="btn btn-primary btn-lg" Text="Button">Aceptar</button>
+                </div>
+
+                <div class="h4">
+                    @ViewBag.Alert
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+
+
+

@@ -1,0 +1,60 @@
+﻿@model ConsumoDeAPI_MegaRed.Models.ImpresionModel.DatosImpresionModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+   
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <form class="Formato">
+
+        <div class="container-fluid row">
+
+            <div class="container-img">
+                <img src="https://i.postimg.cc/HW0FYdv5/Vpay-brandeo-Express-logo.gif" alt="" width="200" height="200">
+            </div>
+
+            <h1>Pago de convenios</h1>
+
+
+            <div>
+                <label class="col-md-6 h2">Id Transaccion</label>
+                @Html.EditorFor(Model => Model.IdTransaccion, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+            </div>
+            <div>
+                <label class="col-md-6 h2">Codigo aprobacion</label>
+                @Html.EditorFor(Model => Model.CodigoAprobacion, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+            </div>
+            <div class="mb-4 ">
+                <label class="col-md-6 h2">Codigo autorizacion</label>
+                @Html.EditorFor(Model => Model.CodigoAutorizacion, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+            </div>
+            <div class="mb-4 ">
+                <label class="col-md-6 h2">Detalle transaccion</label>
+                @Html.EditorFor(Model => Model.DetalleTransaccion, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+            </div>
+            <div class="mb-4 ">
+                <label class="col-md-6 h2">Valor</label>
+                @Html.EditorFor(Model => Model.valor, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+            </div>
+            <div class="mb-4 ">
+                <label class="col-md-6 h2">Cambio</label>
+                @Html.EditorFor(Model => Model.Cambio, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+            </div>
+            <div class="mb-4 ">
+                <label class="col-md-6 h2">Fecha</label>
+                @Html.EditorFor(Model => Model.Fecha, new { htmlAttributes = new { @class = "input-lg", type = "text" } })
+            </div>
+
+
+
+        </div>
+    </form>
+</body>
+</html>
+
+
+
